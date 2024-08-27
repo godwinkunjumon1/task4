@@ -5,12 +5,30 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 
 }
+
+ ::-webkit-scrollbar {
+    width: 15px;
+     }
+
+::-webkit-scrollbar-track {
+    background: #e4e6e5;
+    border-radius: 10px;
+    width: 20px;
+    }
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 5px;
+    }
 h2{
     font-size: 28px;
 }
 .p-top{
     padding-top: 10px;
     padding-bottom: 10px;
+}
+.m-top{
+    margin-top: 30px;
 }
 .l_style{
     line-height: 1.5;
@@ -72,10 +90,14 @@ nav{
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.ro_1, .ro_2{
+.ro_1{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 25%;
     gap: 10px;
+}
+.ro_1 li{
+    list-style: none;
 }
 .hero_img{
     position: relative;
@@ -99,11 +121,10 @@ nav{
 .main_container{
     display: flex;
     gap: 20px;
-    padding-right: 25px;
+    padding-right: 20px;
     padding-left: 40px;
 }
 .doctor{
-    margin-top: 30px;
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -121,9 +142,13 @@ nav{
 }
 .col_2_contents{
     display: flex;
+    gap: 20px;
     margin-top: 15px;
 }
 .content_box{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
     flex: 2;
 }
 .program_3{
@@ -174,7 +199,7 @@ footer{
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
-    padding: 35px;
+    padding: 100px;
     background-color: #0e2222;
     color: white;
 }
@@ -192,15 +217,20 @@ footer{
     display: flex;
     gap: 40px;
 }
+.footer-col ul li{
+    list-style: none;
+    width: 60px;
+}
 .footer-col ul{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 40%;
 }
 .footer-col ul a,.socials ul a{
     text-decoration: none;
     padding-bottom: 10px;
     color: white;
-    padding-left: 10px;
 }
 footer a:hover{
     color: #a3a3a3;
@@ -210,6 +240,12 @@ footer a:hover{
     gap: 10px;
     flex-direction: column;
 }
+.socials ul li{
+    list-style: none;
+}
+.socials ul li a{
+    padding-left: 10px;
+}
 ul{
     position: relative;
 }
@@ -218,7 +254,7 @@ ul{
     margin-top: 10px;
     padding-left: 13px;
 }
-.circle:before {
+.circle li:before {
     content: "";
     position: absolute;
     left: 0;
@@ -228,20 +264,53 @@ ul{
     border-radius: 50%;
     background-color: transparent;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
+    .Logo{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .ro_1{
+        width: 30%;
+        align-content: center;
+    }
     .col_2_contents{
-        display: block;
-    }
-    .Programs_3{
-        width: 100%;
-    }
-}
-@media screen and (max-width: 992px) {
-    .main_container{
+        gap: 20px;
+        display: flex;
         flex-direction: column;
     }
+    .Programs_3{
+        max-width: 100%;
+    }
+    .Programs_3 img{
+        max-width: 359px;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .Programs_1{
+        margin-top: 5px;
+    }
+    .ro_1{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .main_container{
+        flex-direction: column;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .doctor{
+        width: 100%;
+        max-width: 508px;
+    }
+    .mar-top{
+        margin-top: 30px;
+    }
     .col_2_contents{
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
     .col_2{
         order: 1;
@@ -252,6 +321,7 @@ ul{
     }
     .col_1{
         display: flex;
+        gap: 20px;
         justify-content: space-around;
     }
     .ro_1,.ro_2{
@@ -261,5 +331,26 @@ ul{
         display: flex;
         flex-direction: column;
         gap: 20px;
+    }
+}
+@media screen and (max-width:687px) {
+    .image-wrapper {
+        float: none; 
+        max-width: 300px; 
+    } 
+}
+@media screen and (max-width: 850px) {
+    .col_1{
+        flex-direction: column;
+    }
+    .mar-top{
+        margin-top: 0;
+    }
+    .doctor{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 809px;
     }
 }
