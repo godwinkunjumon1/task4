@@ -349,7 +349,7 @@ ul{
     .ro_1,.ro_2{
         display: flex;
     }
-    footer{
+    .footer_contents{
         display: flex;
         flex-direction: column;
         gap: 20px;
